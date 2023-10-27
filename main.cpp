@@ -23,7 +23,7 @@ int main() {
     for (int i = 0; i < most_posible_buckets.size(); i++) {
         count = 0;
         std::fstream fout(filename + std::to_string(i));
-        while (count < 15'000) {
+        while (count < 15) {
             for (int j = 0; j < 15; j++) {
                 str[j] = gen() % 26 + 'a';
             }
