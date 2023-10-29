@@ -38,7 +38,7 @@ int main() {
     int count;
     std::vector<std::string> ans;
     int posible_bucket = 976369;
-    std::string filename = "../data/aboba0";
+    std::string filename = "aboba2";
     for (int i = 0; i < most_posible_buckets.size(); i++) {
         count = 0;
         std::fstream fout(filename + std::to_string(i));
