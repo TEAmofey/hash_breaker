@@ -39,15 +39,15 @@ int main() {
     std::vector<std::string> ans;
     int posible_bucket = 976369;
     std::string filename = "aboba2";
-    for (int i = 0; i < most_posible_buckets.size(); i++) {
-        count = 0;
-        std::fstream fout(filename + std::to_string(i));
-        while (count < 150) {
-            if (h(str) % most_posible_buckets[i] == most_posible_buckets[i] - 1) {
-                fout << aboba << '\n';
-                count++;
-            }
-            next(str);
+
+    count = 0;
+    std::fstream fout(filename);
+    while (count < 150) {
+        if (h(str) % posible_bucket == posible_bucket - 1) {
+            fout << aboba << '\n';
+            count++;
         }
+        next(str);
     }
+
 }
