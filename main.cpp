@@ -11,7 +11,7 @@ std::random_device rd;
 std::mt19937 gen(rd());
 
 void next(std::string& s) {
-    for(int i = s.size(); i >= 0; --i) {
+    for(int i = s.size() - 1; i >= 0; --i) {
         if(s[i] == 'z') {
             s[i] = 'A';
             break;
@@ -38,11 +38,11 @@ int main() {
     int count;
     std::vector<std::string> ans;
     int posible_bucket = 976369;
-    std::string filename = "aboba2";
+    std::string filename = "data/aboba2";
 
     count = 0;
     std::fstream fout(filename);
-    while (count < 150) {
+    while (count < 15000) {
         if (h(str) % posible_bucket == posible_bucket - 1) {
             fout << str << '\n';
             count++;
