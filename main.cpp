@@ -44,7 +44,7 @@ int main() {
     std::fstream fout(filename);
     while (count < 150) {
         if (h(str) % posible_bucket == posible_bucket - 1) {
-            fout << aboba << '\n';
+            fout << str << '\n';
             count++;
         }
         next(str);
